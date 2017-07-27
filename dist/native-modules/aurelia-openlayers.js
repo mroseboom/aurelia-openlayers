@@ -1,3 +1,7 @@
+// Exports
+export * from './ol-map';
+export * from './ol-configuration';
+export * from './ol-map-defaults';
 import { AureliaOpenlayersConfiguration } from './ol-configuration';
 /**
  * Configures the plugin.

@@ -1,13 +1,20 @@
-define(["require", "exports", "./ol-configuration"], function (require, exports, ol_configuration_1) {
+define(["require", "exports", "./ol-map", "./ol-configuration", "./ol-map-defaults", "./ol-configuration"], function (require, exports, ol_map_1, ol_configuration_1, ol_map_defaults_1, ol_configuration_2) {
     "use strict";
+    function __export(m) {
+        for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
+    }
     Object.defineProperty(exports, "__esModule", { value: true });
+    // Exports
+    __export(ol_map_1);
+    __export(ol_configuration_1);
+    __export(ol_map_defaults_1);
     /**
      * Configures the plugin.
      */
     function configure(frameworkConfig, callback) {
         var applyConfig = null;
         // configure...
-        var config = new ol_configuration_1.AureliaOpenlayersConfiguration(frameworkConfig, function (apply) { applyConfig = apply; });
+        var config = new ol_configuration_2.AureliaOpenlayersConfiguration(frameworkConfig, function (apply) { applyConfig = apply; });
         if (callback instanceof Function) {
             callback(config);
         }

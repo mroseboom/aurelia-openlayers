@@ -1,6 +1,6 @@
 {
   "name": "aurelia-openlayers",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A plugin for working with Openlayers within Aurelia",
   "keywords": [
     "aurelia",
@@ -19,7 +19,7 @@
     "type": "git",
     "url": "git+https://github.com/mroseboom/aurelia-openlayers.git"
   },
-    "scripts": {
+  "scripts": {
     "lint": "cross-env tslint --project tsconfig.json",
     "pretest": "cross-env npm run lint",
     "test": "cross-env tsc && karma start --single-run",
