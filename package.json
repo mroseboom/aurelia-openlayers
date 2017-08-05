@@ -1,6 +1,6 @@
 {
   "name": "aurelia-openlayers",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "A plugin for working with Openlayers within Aurelia",
   "keywords": [
     "aurelia",
@@ -13,7 +13,7 @@
   },
   "license": "MIT",
   "author": "Maurice Roseboom",
-  "main": "index.js",
+  "main": "dist/commonjs/aurelia-openlayers.js",
   "typings": "dist/commonjs/aurelia-openlayers.d.ts",
   "repository": {
     "type": "git",

@@ -1,13 +1,7 @@
 "use strict";
-function __export(m) {
-    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
-}
 Object.defineProperty(exports, "__esModule", { value: true });
-// Exports
-__export(require("./ol-map"));
-__export(require("./ol-configuration"));
-__export(require("./ol-map-defaults"));
 var ol_configuration_1 = require("./ol-configuration");
+exports.AureliaOpenlayersConfiguration = ol_configuration_1.AureliaOpenlayersConfiguration;
 /**
  * Configures the plugin.
  */

@@ -1,8 +1,8 @@
-import { MapSettings } from './ol-map-defaults';
-export declare class OlMapCustomElement {
-    private mapSettings;
+import { DefaultMapSettings } from './ol-map-defaults';
+export declare class OlMap {
+    private settings;
     private mapReference;
     private map;
-    constructor(mapSettings: MapSettings);
+    constructor(settings: DefaultMapSettings);
     attached(): void;
 }
