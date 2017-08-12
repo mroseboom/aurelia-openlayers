@@ -1,8 +1,9 @@
-import { inject, customElement } from "aurelia-framework";
+import { inject, customElement, inlineView } from "aurelia-framework";
 import { DefaultMapSettings } from './ol-map-defaults';
 
 import * as ol from 'openlayers';
 
+@inlineView(`<template><div ref="mapReference"></div></template>`)
 @customElement('ol-map')
 @inject(DefaultMapSettings)
 export class OlMap {

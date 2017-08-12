@@ -36,6 +36,7 @@ System.register(["aurelia-framework", "./ol-map-defaults", "openlayers"], functi
                     });
                 };
                 OlMap = __decorate([
+                    aurelia_framework_1.inlineView("<template><div ref=\"mapReference\"></div></template>"),
                     aurelia_framework_1.customElement('ol-map'),
                     aurelia_framework_1.inject(ol_map_defaults_1.DefaultMapSettings)
                 ], OlMap);
