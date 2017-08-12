@@ -19,6 +19,7 @@
     "type": "git",
     "url": "git+https://github.com/mroseboom/aurelia-openlayers.git"
   },
+  "files": ["dist"],
   "scripts": {
     "lint": "cross-env tslint --project tsconfig.json",
     "pretest": "cross-env npm run lint",
