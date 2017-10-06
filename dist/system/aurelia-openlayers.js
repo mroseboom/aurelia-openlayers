@@ -1,4 +1,4 @@
-System.register(["./ol-configuration"], function (exports_1, context_1) {
+System.register(["./ol-configuration", "./services/ol-map-service"], function (exports_1, context_1) {
     "use strict";
     var __moduleName = context_1 && context_1.id;
     /**
@@ -17,15 +17,19 @@ System.register(["./ol-configuration"], function (exports_1, context_1) {
         applyConfig();
     }
     exports_1("configure", configure);
-    var ol_configuration_1;
+    var ol_configuration_1, ol_map_service_1;
     return {
         setters: [
             function (ol_configuration_1_1) {
                 ol_configuration_1 = ol_configuration_1_1;
+            },
+            function (ol_map_service_1_1) {
+                ol_map_service_1 = ol_map_service_1_1;
             }
         ],
         execute: function () {
             exports_1("AureliaOpenlayersConfiguration", ol_configuration_1.AureliaOpenlayersConfiguration);
+            exports_1("OlMapService", ol_map_service_1.OlMapService);
         }
     };
 });

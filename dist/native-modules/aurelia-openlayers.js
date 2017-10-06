@@ -1,4 +1,5 @@
 import { AureliaOpenlayersConfiguration } from './ol-configuration';
+import { OlMapService } from './services/ol-map-service';
 /**
  * Configures the plugin.
  */
@@ -15,4 +16,4 @@ export function configure(frameworkConfig, callback) {
     applyConfig();
 }
 // Exports
-export { AureliaOpenlayersConfiguration };
+export { AureliaOpenlayersConfiguration, OlMapService };

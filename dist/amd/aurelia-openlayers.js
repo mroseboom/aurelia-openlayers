@@ -1,7 +1,8 @@
-define(["require", "exports", "./ol-configuration"], function (require, exports, ol_configuration_1) {
+define(["require", "exports", "./ol-configuration", "./services/ol-map-service"], function (require, exports, ol_configuration_1, ol_map_service_1) {
     "use strict";
     Object.defineProperty(exports, "__esModule", { value: true });
     exports.AureliaOpenlayersConfiguration = ol_configuration_1.AureliaOpenlayersConfiguration;
+    exports.OlMapService = ol_map_service_1.OlMapService;
     /**
      * Configures the plugin.
      */

@@ -2,6 +2,8 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 var ol_configuration_1 = require("./ol-configuration");
 exports.AureliaOpenlayersConfiguration = ol_configuration_1.AureliaOpenlayersConfiguration;
+var ol_map_service_1 = require("./services/ol-map-service");
+exports.OlMapService = ol_map_service_1.OlMapService;
 /**
  * Configures the plugin.
  */
