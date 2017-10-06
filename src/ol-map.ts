@@ -1,5 +1,6 @@
-import { inject, customElement, inlineView } from "aurelia-framework";
+import { inject, customElement, inlineView } from 'aurelia-framework';
 import { DefaultMapSettings } from './ol-map-defaults';
+import { OlMapService } from './services/ol-map-service';
 
 import * as ol from 'openlayers';
 
@@ -10,7 +11,8 @@ export class OlMap {
     private mapReference: HTMLElement;
     private map: ol.Map;
 
-    constructor(private settings: DefaultMapSettings) {
+    constructor(private settings: DefaultMapSettings,
+                private olMapService: OlMapService) {
 
     }
 
@@ -23,5 +25,7 @@ export class OlMap {
                 zoom: 2
             })
         });
+
+        this.olMapService.registerMap(this);
     }
 }

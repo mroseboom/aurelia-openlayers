@@ -10,8 +10,9 @@ var aurelia_framework_1 = require("aurelia-framework");
 var ol_map_defaults_1 = require("./ol-map-defaults");
 var ol = require("openlayers");
 var OlMap = (function () {
-    function OlMap(settings) {
+    function OlMap(settings, olMapService) {
         this.settings = settings;
+        this.olMapService = olMapService;
     }
     OlMap.prototype.attached = function () {
         this.map = new ol.Map({
@@ -22,6 +23,7 @@ var OlMap = (function () {
                 zoom: 2
             })
         });
+        this.olMapService.registerMap(this);
     };
     OlMap = __decorate([
         aurelia_framework_1.inlineView("<template><div ref=\"mapReference\"></div></template>"),

@@ -8,8 +8,9 @@ define(["require", "exports", "aurelia-framework", "./ol-map-defaults", "openlay
     "use strict";
     Object.defineProperty(exports, "__esModule", { value: true });
     var OlMap = (function () {
-        function OlMap(settings) {
+        function OlMap(settings, olMapService) {
             this.settings = settings;
+            this.olMapService = olMapService;
         }
         OlMap.prototype.attached = function () {
             this.map = new ol.Map({
@@ -20,6 +21,7 @@ define(["require", "exports", "aurelia-framework", "./ol-map-defaults", "openlay
                     zoom: 2
                 })
             });
+            this.olMapService.registerMap(this);
         };
         OlMap = __decorate([
             aurelia_framework_1.inlineView("<template><div ref=\"mapReference\"></div></template>"),
