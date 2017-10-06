@@ -25,7 +25,7 @@ export class OlMapService {
         let defer;
 
         if (maps[mapId] === undefined || maps[mapId].resolvedDefer === true) {
-            defer = Deferred();
+            defer = new Deferred();
 
             maps[mapId] = {
                 defer,

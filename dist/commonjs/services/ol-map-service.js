@@ -24,7 +24,7 @@ var OlMapService = (function () {
     OlMapService.prototype.getUnresolvedDefer = function (mapId) {
         var defer;
         if (maps[mapId] === undefined || maps[mapId].resolvedDefer === true) {
-            defer = Deferred();
+            defer = new Deferred();
             maps[mapId] = {
                 defer: defer,
                 resolvedDefer: false
