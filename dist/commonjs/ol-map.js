@@ -7,6 +7,8 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 var aurelia_framework_1 = require("aurelia-framework");
+var ol_map_defaults_1 = require("./ol-map-defaults");
+var ol_map_service_1 = require("./services/ol-map-service");
 var ol = require("openlayers");
 var OlMap = (function () {
     function OlMap(settings, olMapService) {
@@ -27,7 +29,7 @@ var OlMap = (function () {
     OlMap = __decorate([
         aurelia_framework_1.inlineView("<template><div ref=\"mapReference\"></div></template>"),
         aurelia_framework_1.customElement('ol-map'),
-        aurelia_framework_1.autoinject()
+        aurelia_framework_1.inject(ol_map_defaults_1.DefaultMapSettings, ol_map_service_1.OlMapService)
     ], OlMap);
     return OlMap;
 }());

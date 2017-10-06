@@ -1,4 +1,4 @@
-System.register(["aurelia-framework", "openlayers"], function (exports_1, context_1) {
+System.register(["aurelia-framework", "./ol-map-defaults", "./services/ol-map-service", "openlayers"], function (exports_1, context_1) {
     "use strict";
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
         var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -7,11 +7,17 @@ System.register(["aurelia-framework", "openlayers"], function (exports_1, contex
         return c > 3 && r && Object.defineProperty(target, key, r), r;
     };
     var __moduleName = context_1 && context_1.id;
-    var aurelia_framework_1, ol, OlMap;
+    var aurelia_framework_1, ol_map_defaults_1, ol_map_service_1, ol, OlMap;
     return {
         setters: [
             function (aurelia_framework_1_1) {
                 aurelia_framework_1 = aurelia_framework_1_1;
+            },
+            function (ol_map_defaults_1_1) {
+                ol_map_defaults_1 = ol_map_defaults_1_1;
+            },
+            function (ol_map_service_1_1) {
+                ol_map_service_1 = ol_map_service_1_1;
             },
             function (ol_1) {
                 ol = ol_1;
@@ -37,7 +43,7 @@ System.register(["aurelia-framework", "openlayers"], function (exports_1, contex
                 OlMap = __decorate([
                     aurelia_framework_1.inlineView("<template><div ref=\"mapReference\"></div></template>"),
                     aurelia_framework_1.customElement('ol-map'),
-                    aurelia_framework_1.autoinject()
+                    aurelia_framework_1.inject(ol_map_defaults_1.DefaultMapSettings, ol_map_service_1.OlMapService)
                 ], OlMap);
                 return OlMap;
             }());

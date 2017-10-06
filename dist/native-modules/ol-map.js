@@ -4,7 +4,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
-import { autoinject, customElement, inlineView } from 'aurelia-framework';
+import { inject, customElement, inlineView } from 'aurelia-framework';
+import { DefaultMapSettings } from './ol-map-defaults';
+import { OlMapService } from './services/ol-map-service';
 import * as ol from 'openlayers';
 var OlMap = (function () {
     function OlMap(settings, olMapService) {
@@ -25,7 +27,7 @@ var OlMap = (function () {
     OlMap = __decorate([
         inlineView("<template><div ref=\"mapReference\"></div></template>"),
         customElement('ol-map'),
-        autoinject()
+        inject(DefaultMapSettings, OlMapService)
     ], OlMap);
     return OlMap;
 }());
