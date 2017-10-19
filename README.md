@@ -1,7 +1,7 @@
 # aurelia-openlayers
 
-A highly configurable custom element for use in your Aurelia applications for
-inserting Google Maps into your application.
+A custom element for use in your Aurelia applications for
+inserting Openlayers into your application.
 
 ## WIP - Disclosure
 ------
