@@ -3,6 +3,11 @@
 A highly configurable custom element for use in your Aurelia applications for
 inserting Google Maps into your application.
 
+## WIP - Disclosure
+------
+This plugin is Work in Progess, defining his archicture and also his implementation. It's not ready to use in live/production enviroments.
+
+
 ## To Install
 
 **Webpack/Aurelia CLI**
