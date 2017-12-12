@@ -8,13 +8,11 @@ import * as ol from 'openlayers';
 @customElement('ol-map')
 @inject(DefaultMapSettings, OlMapService)
 export class OlMap {
+    public map: ol.Map;
     private mapReference: HTMLElement;
-    private map: ol.Map;
 
     constructor(private settings: DefaultMapSettings,
-                private olMapService: OlMapService) {
-
-    }
+                private olMapService: OlMapService) {}
 
     public attached(): void {
         this.map = new ol.Map({

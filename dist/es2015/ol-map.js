@@ -8,7 +8,7 @@ import { inject, customElement, inlineView } from 'aurelia-framework';
 import { DefaultMapSettings } from './ol-map-defaults';
 import { OlMapService } from './services/ol-map-service';
 import * as ol from 'openlayers';
-var OlMap = (function () {
+var OlMap = /** @class */ (function () {
     function OlMap(settings, olMapService) {
         this.settings = settings;
         this.olMapService = olMapService;
@@ -28,6 +28,7 @@ var OlMap = (function () {
         inlineView("<template><div ref=\"mapReference\"></div></template>"),
         customElement('ol-map'),
         inject(DefaultMapSettings, OlMapService)
+        // @generateBindables()
     ], OlMap);
     return OlMap;
 }());

@@ -1,5 +1,5 @@
 import * as ol from 'openlayers';
-var DefaultMapSettings = (function () {
+var DefaultMapSettings = /** @class */ (function () {
     function DefaultMapSettings() {
         this.layers = [
             new ol.layer.Tile({

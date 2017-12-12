@@ -7,7 +7,7 @@ define(["require", "exports", "./ol-map-defaults", "aurelia-pal"], function (req
     /**
      * A configuration builder for the openlayers plugin.
      */
-    var AureliaOpenlayersConfiguration = (function () {
+    var AureliaOpenlayersConfiguration = /** @class */ (function () {
         function AureliaOpenlayersConfiguration(frameworkConfig, applySetter) {
             var _this = this;
             this.frameworkConfig = frameworkConfig;

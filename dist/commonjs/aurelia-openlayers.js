@@ -4,6 +4,8 @@ var ol_configuration_1 = require("./ol-configuration");
 exports.AureliaOpenlayersConfiguration = ol_configuration_1.AureliaOpenlayersConfiguration;
 var ol_map_service_1 = require("./services/ol-map-service");
 exports.OlMapService = ol_map_service_1.OlMapService;
+var ol_map_1 = require("./ol-map");
+exports.OlMap = ol_map_1.OlMap;
 /**
  * Configures the plugin.
  */

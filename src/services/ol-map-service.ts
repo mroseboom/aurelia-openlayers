@@ -114,7 +114,9 @@ export class OlMapService {
     }
 }
 
-function Deferred() {
+class Deferred {
+    private promise: Promise<{}>;
+
     /**
      * A method to resolve the associated Promise with the value passed.
      * If the promise is already settled it does nothing.
@@ -123,7 +125,7 @@ function Deferred() {
      * If the value is a Promise then the associated promise assumes the state
      * of Promise passed as value.
      */
-    this.resolve = null;
+    private resolve: {} | PromiseLike<{}> | null = null;
 
     /**
      * A method to reject the associated Promise with the value passed.
@@ -133,15 +135,16 @@ function Deferred() {
      * Generally its an Error object. If however a Promise is passed, then the Promise
      * itself will be the reason for rejection no matter the state of the Promise.
      */
-    this.reject = null;
+    private reject: {} | PromiseLike<{}> | null = null;
 
-    /**
-     * A newly created Pomise object.
-     * Initially in pending state.
-     */
-    this.promise = new Promise(function(resolve: any, reject: any) {
-        this.resolve = resolve;
-        this.reject = reject;
-    }.bind(this));
-    Object.freeze(this);
+    constructor() {
+        /**
+         * A newly created Pomise object.
+         * Initially in pending state.
+         */
+        this.promise = new Promise((resolve, reject) => {
+            this.resolve = resolve;
+            this.reject = reject;
+        });
+    }
 }

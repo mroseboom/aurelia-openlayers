@@ -7,7 +7,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 define(["require", "exports", "aurelia-framework", "./ol-map-defaults", "./services/ol-map-service", "openlayers"], function (require, exports, aurelia_framework_1, ol_map_defaults_1, ol_map_service_1, ol) {
     "use strict";
     Object.defineProperty(exports, "__esModule", { value: true });
-    var OlMap = (function () {
+    var OlMap = /** @class */ (function () {
         function OlMap(settings, olMapService) {
             this.settings = settings;
             this.olMapService = olMapService;
@@ -27,6 +27,7 @@ define(["require", "exports", "aurelia-framework", "./ol-map-defaults", "./servi
             aurelia_framework_1.inlineView("<template><div ref=\"mapReference\"></div></template>"),
             aurelia_framework_1.customElement('ol-map'),
             aurelia_framework_1.inject(ol_map_defaults_1.DefaultMapSettings, ol_map_service_1.OlMapService)
+            // @generateBindables()
         ], OlMap);
         return OlMap;
     }());

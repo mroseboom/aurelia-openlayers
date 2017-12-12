@@ -9,7 +9,7 @@ System.register(["openlayers"], function (exports_1, context_1) {
             }
         ],
         execute: function () {
-            DefaultMapSettings = (function () {
+            DefaultMapSettings = /** @class */ (function () {
                 function DefaultMapSettings() {
                     this.layers = [
                         new ol.layer.Tile({

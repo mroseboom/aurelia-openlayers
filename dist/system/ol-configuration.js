@@ -18,7 +18,7 @@ System.register(["./ol-map-defaults", "aurelia-pal"], function (exports_1, conte
             /**
              * A configuration builder for the openlayers plugin.
              */
-            AureliaOpenlayersConfiguration = (function () {
+            AureliaOpenlayersConfiguration = /** @class */ (function () {
                 function AureliaOpenlayersConfiguration(frameworkConfig, applySetter) {
                     var _this = this;
                     this.frameworkConfig = frameworkConfig;

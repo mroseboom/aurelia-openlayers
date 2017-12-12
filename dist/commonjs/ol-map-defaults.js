@@ -1,7 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 var ol = require("openlayers");
-var DefaultMapSettings = (function () {
+var DefaultMapSettings = /** @class */ (function () {
     function DefaultMapSettings() {
         this.layers = [
             new ol.layer.Tile({

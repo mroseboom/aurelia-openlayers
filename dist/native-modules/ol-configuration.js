@@ -6,7 +6,7 @@ var resources = {
 /**
  * A configuration builder for the openlayers plugin.
  */
-var AureliaOpenlayersConfiguration = (function () {
+var AureliaOpenlayersConfiguration = /** @class */ (function () {
     function AureliaOpenlayersConfiguration(frameworkConfig, applySetter) {
         var _this = this;
         this.frameworkConfig = frameworkConfig;
