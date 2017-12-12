@@ -1,5 +1,5 @@
 {
-  "extends": "tslint:latest",
+  "extends": "tslint:recommended",
   "rules": {
     "quotemark": [true, "single"],
     "object-literal-sort-keys": false,
@@ -14,6 +14,7 @@
     "arrow-parens": false,
     "max-classes-per-file": [false],
     "prefer-for-of": false,
-    "prefer-conditional-expression": false
+    "prefer-conditional-expression": false,
+    "no-unused-variable": false
   }
 }
