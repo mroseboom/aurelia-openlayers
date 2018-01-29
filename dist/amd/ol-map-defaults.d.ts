@@ -1,9 +1,10 @@
 /// <reference types="openlayers" />
-import * as ol from 'openlayers';
+import Base from 'ol/layer/base';
+import TileLayer from 'ol/layer/tile';
 export interface MapSettings {
-    layers: ol.layer.Base[];
+    layers: Base[];
 }
 export declare class DefaultMapSettings implements MapSettings {
     [setting: string]: any;
-    layers: ol.layer.Tile[];
+    layers: TileLayer[];
 }

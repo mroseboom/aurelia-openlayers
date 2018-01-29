@@ -1,4 +1,4 @@
-System.register(["aurelia-framework", "./ol-map-defaults", "./services/ol-map-service", "openlayers"], function (exports_1, context_1) {
+System.register(["aurelia-framework", "./ol-map-defaults", "./services/ol-map-service", "ol/map", "ol/view"], function (exports_1, context_1) {
     "use strict";
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
         var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -7,7 +7,7 @@ System.register(["aurelia-framework", "./ol-map-defaults", "./services/ol-map-se
         return c > 3 && r && Object.defineProperty(target, key, r), r;
     };
     var __moduleName = context_1 && context_1.id;
-    var aurelia_framework_1, ol_map_defaults_1, ol_map_service_1, ol, OlMap;
+    var aurelia_framework_1, ol_map_defaults_1, ol_map_service_1, map_1, view_1, OlMap;
     return {
         setters: [
             function (aurelia_framework_1_1) {
@@ -19,8 +19,11 @@ System.register(["aurelia-framework", "./ol-map-defaults", "./services/ol-map-se
             function (ol_map_service_1_1) {
                 ol_map_service_1 = ol_map_service_1_1;
             },
-            function (ol_1) {
-                ol = ol_1;
+            function (map_1_1) {
+                map_1 = map_1_1;
+            },
+            function (view_1_1) {
+                view_1 = view_1_1;
             }
         ],
         execute: function () {
@@ -30,21 +33,22 @@ System.register(["aurelia-framework", "./ol-map-defaults", "./services/ol-map-se
                     this.olMapService = olMapService;
                 }
                 OlMap.prototype.attached = function () {
-                    this.map = new ol.Map({
+                    this.map = new map_1.default({
                         layers: this.settings.layers,
                         target: this.mapReference,
-                        view: new ol.View({
+                        view: new view_1.default({
                             center: [0, 0],
                             zoom: 2
                         })
                     });
                     this.olMapService.registerMap(this);
+                    // tslint:disable-next-line:no-console
+                    console.debug('map registered!');
                 };
                 OlMap = __decorate([
                     aurelia_framework_1.inlineView("<template><div ref=\"mapReference\"></div></template>"),
                     aurelia_framework_1.customElement('ol-map'),
                     aurelia_framework_1.inject(ol_map_defaults_1.DefaultMapSettings, ol_map_service_1.OlMapService)
-                    // @generateBindables()
                 ], OlMap);
                 return OlMap;
             }());

@@ -9,28 +9,30 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var aurelia_framework_1 = require("aurelia-framework");
 var ol_map_defaults_1 = require("./ol-map-defaults");
 var ol_map_service_1 = require("./services/ol-map-service");
-var ol = require("openlayers");
+var map_1 = require("ol/map");
+var view_1 = require("ol/view");
 var OlMap = /** @class */ (function () {
     function OlMap(settings, olMapService) {
         this.settings = settings;
         this.olMapService = olMapService;
     }
     OlMap.prototype.attached = function () {
-        this.map = new ol.Map({
+        this.map = new map_1.default({
             layers: this.settings.layers,
             target: this.mapReference,
-            view: new ol.View({
+            view: new view_1.default({
                 center: [0, 0],
                 zoom: 2
             })
         });
         this.olMapService.registerMap(this);
+        // tslint:disable-next-line:no-console
+        console.debug('map registered!');
     };
     OlMap = __decorate([
         aurelia_framework_1.inlineView("<template><div ref=\"mapReference\"></div></template>"),
         aurelia_framework_1.customElement('ol-map'),
         aurelia_framework_1.inject(ol_map_defaults_1.DefaultMapSettings, ol_map_service_1.OlMapService)
-        // @generateBindables()
     ], OlMap);
     return OlMap;
 }());

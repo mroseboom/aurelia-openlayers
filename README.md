@@ -13,7 +13,7 @@ This plugin is Work in Progess, defining his archicture and also his implementat
 **Webpack/Aurelia CLI**
 
 ``` shell
-npm install aurelia-google-maps --save
+npm install aurelia-openlayers --save
 ```
 
 ### CLI User?

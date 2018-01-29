@@ -1,14 +1,16 @@
-import * as ol from 'openlayers';
+import Base from 'ol/layer/base';
+import TileLayer from 'ol/layer/tile';
+import OSM from 'ol/source/osm';
 
 export interface MapSettings {
-    layers: ol.layer.Base[];
+    layers: Base[];
 }
 
 export class DefaultMapSettings implements MapSettings {
     [setting: string]: any;
     public layers = [
-        new ol.layer.Tile({
-            source: new ol.source.OSM()
+        new TileLayer({
+            source: new OSM()
         })
     ];
 }

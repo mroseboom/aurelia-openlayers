@@ -1,4 +1,3 @@
-import { OlMap } from '../ol-map';
 export declare class OlMapService {
     /**
      * Mark the map instance as resolved.
@@ -26,10 +25,10 @@ export declare class OlMapService {
      * Register a new map instance
      * When the map instance already exists
      *
-     * @param {OlMap} OlMap
+     * @param {T} olMap
      * @param {string} [mapId='main']
      */
-    registerMap(olMap: OlMap, mapId?: string): void;
+    registerMap<T>(olMap: T, mapId?: string): void;
     /**
      * Get a specific map instance
      *
@@ -38,7 +37,7 @@ export declare class OlMapService {
      *
      * @returns {Promise<OlMap>} The view-model of OlMap.
      */
-    getMap(mapId?: string): Promise<OlMap>;
+    getMap<T>(mapId?: string): Promise<T>;
     /**
      * Removed a resolved map instance from the collection
      *

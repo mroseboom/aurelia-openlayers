@@ -60,7 +60,7 @@ System.register([], function (exports_1, context_1) {
                  * Register a new map instance
                  * When the map instance already exists
                  *
-                 * @param {OlMap} OlMap
+                 * @param {T} olMap
                  * @param {string} [mapId='main']
                  */
                 OlMapService.prototype.registerMap = function (olMap, mapId) {

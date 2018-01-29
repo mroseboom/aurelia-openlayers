@@ -1,11 +1,11 @@
-define(["require", "exports", "openlayers"], function (require, exports, ol) {
+define(["require", "exports", "ol/layer/tile", "ol/source/osm"], function (require, exports, tile_1, osm_1) {
     "use strict";
     Object.defineProperty(exports, "__esModule", { value: true });
     var DefaultMapSettings = /** @class */ (function () {
         function DefaultMapSettings() {
             this.layers = [
-                new ol.layer.Tile({
-                    source: new ol.source.OSM()
+                new tile_1.default({
+                    source: new osm_1.default()
                 })
             ];
         }

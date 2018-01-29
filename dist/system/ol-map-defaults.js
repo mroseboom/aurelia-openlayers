@@ -1,19 +1,22 @@
-System.register(["openlayers"], function (exports_1, context_1) {
+System.register(["ol/layer/tile", "ol/source/osm"], function (exports_1, context_1) {
     "use strict";
     var __moduleName = context_1 && context_1.id;
-    var ol, DefaultMapSettings;
+    var tile_1, osm_1, DefaultMapSettings;
     return {
         setters: [
-            function (ol_1) {
-                ol = ol_1;
+            function (tile_1_1) {
+                tile_1 = tile_1_1;
+            },
+            function (osm_1_1) {
+                osm_1 = osm_1_1;
             }
         ],
         execute: function () {
             DefaultMapSettings = /** @class */ (function () {
                 function DefaultMapSettings() {
                     this.layers = [
-                        new ol.layer.Tile({
-                            source: new ol.source.OSM()
+                        new tile_1.default({
+                            source: new osm_1.default()
                         })
                     ];
                 }

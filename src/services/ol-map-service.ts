@@ -1,5 +1,3 @@
-import { OlMap } from '../ol-map';
-
 // Keep track of the map instances
 const maps: { [key: string]: any } = {};
 
@@ -59,10 +57,10 @@ export class OlMapService {
      * Register a new map instance
      * When the map instance already exists
      *
-     * @param {OlMap} OlMap
+     * @param {T} olMap
      * @param {string} [mapId='main']
      */
-    public registerMap(olMap: OlMap, mapId: string = 'main'): void {
+    public registerMap<T>(olMap: T, mapId: string = 'main'): void {
         mapId = this.obtainEffectiveMapId(mapId);
 
         const defer = this.getUnresolvedDefer(mapId);
@@ -78,7 +76,7 @@ export class OlMapService {
      *
      * @returns {Promise<OlMap>} The view-model of OlMap.
      */
-    public getMap(mapId: string = 'main'): Promise<OlMap> {
+    public getMap<T>(mapId: string = 'main'): Promise<T> {
         mapId = this.obtainEffectiveMapId(mapId);
 
         const defer = this.getDefer(mapId);

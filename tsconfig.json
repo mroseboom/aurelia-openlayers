@@ -1,28 +1,32 @@
 {
-  "compilerOptions": {
-    "module": "amd",
-    "moduleResolution": "node",
-    "target": "es5",
-    "lib": [
-      "es2017",
-      "dom"
+    "compilerOptions": {
+        "module": "amd",
+        "moduleResolution": "node",
+        "target": "es5",
+        "lib": [
+            "es2017",
+            "dom"
+        ],
+        "outDir": "dist/test",
+        "noImplicitAny": true,
+        "noUnusedLocals": false,
+        "noUnusedParameters": true,
+        "noImplicitReturns": true,
+        "strictNullChecks": true,
+        "declaration": true,
+        "forceConsistentCasingInFileNames": true,
+        "experimentalDecorators": true,
+        "noEmitHelpers": false,
+        "stripInternal": true
+    },
+    "exclude": [
+        ".vscode",
+        "dist",
+        "doc",
+        "node_modules"
     ],
-    "outDir": "dist/test",
-    "noImplicitAny": true,
-    "noUnusedLocals": false,
-    "noUnusedParameters": true,
-    "noImplicitReturns": true,
-    "strictNullChecks": true,
-    "declaration": true,
-    "forceConsistentCasingInFileNames": true,
-    "experimentalDecorators": true,
-    "noEmitHelpers": false,
-    "stripInternal": true
-  },
-  "exclude": [
-    ".vscode",
-    "dist",
-    "doc",
-    "node_modules"
-  ]
+    "typeRoots": [
+        "./custom_typings/@types/",
+        "./node_modules/@types/"
+    ]
 }

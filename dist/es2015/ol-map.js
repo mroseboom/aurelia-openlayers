@@ -7,28 +7,30 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 import { inject, customElement, inlineView } from 'aurelia-framework';
 import { DefaultMapSettings } from './ol-map-defaults';
 import { OlMapService } from './services/ol-map-service';
-import * as ol from 'openlayers';
+import Map from 'ol/map';
+import View from 'ol/view';
 var OlMap = /** @class */ (function () {
     function OlMap(settings, olMapService) {
         this.settings = settings;
         this.olMapService = olMapService;
     }
     OlMap.prototype.attached = function () {
-        this.map = new ol.Map({
+        this.map = new Map({
             layers: this.settings.layers,
             target: this.mapReference,
-            view: new ol.View({
+            view: new View({
                 center: [0, 0],
                 zoom: 2
             })
         });
         this.olMapService.registerMap(this);
+        // tslint:disable-next-line:no-console
+        console.debug('map registered!');
     };
     OlMap = __decorate([
         inlineView("<template><div ref=\"mapReference\"></div></template>"),
         customElement('ol-map'),
         inject(DefaultMapSettings, OlMapService)
-        // @generateBindables()
     ], OlMap);
     return OlMap;
 }());

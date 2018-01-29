@@ -1,9 +1,10 @@
-import * as ol from 'openlayers';
+import TileLayer from 'ol/layer/tile';
+import OSM from 'ol/source/osm';
 var DefaultMapSettings = /** @class */ (function () {
     function DefaultMapSettings() {
         this.layers = [
-            new ol.layer.Tile({
-                source: new ol.source.OSM()
+            new TileLayer({
+                source: new OSM()
             })
         ];
     }
