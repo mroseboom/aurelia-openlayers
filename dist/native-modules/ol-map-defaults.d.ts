@@ -1,10 +1,9 @@
 /// <reference types="openlayers" />
-import Base from 'ol/layer/base';
-import TileLayer from 'ol/layer/tile';
-export interface MapSettings {
-    layers: Base[];
-}
-export declare class DefaultMapSettings implements MapSettings {
-    [setting: string]: any;
-    layers: TileLayer[];
+import VectorLayer from 'ol/layer/vector';
+import View from 'ol/view';
+export declare class DefaultMapSettings implements olx.MapOptions {
+    controls: ol.Collection<ol.control.Control>;
+    interactions: ol.Collection<ol.interaction.Interaction>;
+    view: View;
+    layers: VectorLayer[];
 }

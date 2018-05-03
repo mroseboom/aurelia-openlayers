@@ -1,13 +1,14 @@
-import { MapSettings, DefaultMapSettings } from './ol-map-defaults';
+import { DefaultMapSettings } from './ol-map-defaults';
 import { FrameworkConfiguration } from 'aurelia-framework';
 import { PLATFORM } from 'aurelia-pal';
 
 const resources: { [key: string]: string } = {
-    'ol-map': PLATFORM.moduleName('./ol-map')
+    'ol-map': PLATFORM.moduleName('./ol-map'),
+    'ol-control': PLATFORM.moduleName('./ol-control')
 };
 
 // tslint:disable-next-line:max-line-length
-export type OpenlayersResourceName = 'ol-map';
+export type OpenlayersResourceName = 'ol-map' | 'ol-control';
 
 /**
  * A configuration builder for the openlayers plugin.
@@ -18,7 +19,7 @@ export class AureliaOpenlayersConfiguration {
     /**
      * The global configuration settings.
      */
-    public settings: MapSettings;
+    public settings: olx.MapOptions;
 
     constructor(private frameworkConfig: FrameworkConfiguration,
                 applySetter: (apply: () => void) => void) {
@@ -43,7 +44,8 @@ export class AureliaOpenlayersConfiguration {
      * @return This instance.
      */
     public useStandardResources(): this {
-        return this.useResource('ol-map');
+        return this.useResource('ol-map')
+                   .useResource('ol-control');
     }
 
     /**

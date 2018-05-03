@@ -1,6 +1,6 @@
-import { MapSettings } from './ol-map-defaults';
+/// <reference types="openlayers" />
 import { FrameworkConfiguration } from 'aurelia-framework';
-export declare type OpenlayersResourceName = 'ol-map';
+export declare type OpenlayersResourceName = 'ol-map' | 'ol-control';
 /**
  * A configuration builder for the openlayers plugin.
  */
@@ -10,7 +10,7 @@ export declare class AureliaOpenlayersConfiguration {
     /**
      * The global configuration settings.
      */
-    settings: MapSettings;
+    settings: olx.MapOptions;
     constructor(frameworkConfig: FrameworkConfiguration, applySetter: (apply: () => void) => void);
     apply(): void;
     /**

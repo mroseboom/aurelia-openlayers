@@ -43,7 +43,7 @@ export declare class OlMapService {
      *
      * @param {string} mapId
      */
-    removeMap(mapId: string): void;
+    removeMap(mapId?: string): void;
     isMainInstance(mapId: string): boolean;
     private obtainEffectiveMapId(mapId?);
 }

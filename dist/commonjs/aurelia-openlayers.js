@@ -1,11 +1,15 @@
 "use strict";
+function __export(m) {
+    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
+}
 Object.defineProperty(exports, "__esModule", { value: true });
+// Exports
+__export(require("./ol-configuration"));
+__export(require("./services/ol-map-service"));
+__export(require("./ol-map"));
+__export(require("./ol-control"));
+__export(require("./ol-map-defaults"));
 var ol_configuration_1 = require("./ol-configuration");
-exports.AureliaOpenlayersConfiguration = ol_configuration_1.AureliaOpenlayersConfiguration;
-var ol_map_service_1 = require("./services/ol-map-service");
-exports.OlMapService = ol_map_service_1.OlMapService;
-var ol_map_1 = require("./ol-map");
-exports.OlMap = ol_map_1.OlMap;
 /**
  * Configures the plugin.
  */

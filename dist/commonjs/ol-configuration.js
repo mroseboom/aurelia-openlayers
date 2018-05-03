@@ -3,7 +3,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var ol_map_defaults_1 = require("./ol-map-defaults");
 var aurelia_pal_1 = require("aurelia-pal");
 var resources = {
-    'ol-map': aurelia_pal_1.PLATFORM.moduleName('./ol-map')
+    'ol-map': aurelia_pal_1.PLATFORM.moduleName('./ol-map'),
+    'ol-control': aurelia_pal_1.PLATFORM.moduleName('./ol-control')
 };
 /**
  * A configuration builder for the openlayers plugin.
@@ -32,7 +33,8 @@ var AureliaOpenlayersConfiguration = /** @class */ (function () {
      * @return This instance.
      */
     AureliaOpenlayersConfiguration.prototype.useStandardResources = function () {
-        return this.useResource('ol-map');
+        return this.useResource('ol-map')
+            .useResource('ol-control');
     };
     /**
      * Exports the chosen openlayers element or view to Aurelia's global resources.

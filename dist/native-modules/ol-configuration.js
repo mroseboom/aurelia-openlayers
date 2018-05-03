@@ -1,7 +1,8 @@
 import { DefaultMapSettings } from './ol-map-defaults';
 import { PLATFORM } from 'aurelia-pal';
 var resources = {
-    'ol-map': PLATFORM.moduleName('./ol-map')
+    'ol-map': PLATFORM.moduleName('./ol-map'),
+    'ol-control': PLATFORM.moduleName('./ol-control')
 };
 /**
  * A configuration builder for the openlayers plugin.
@@ -30,7 +31,8 @@ var AureliaOpenlayersConfiguration = /** @class */ (function () {
      * @return This instance.
      */
     AureliaOpenlayersConfiguration.prototype.useStandardResources = function () {
-        return this.useResource('ol-map');
+        return this.useResource('ol-map')
+            .useResource('ol-control');
     };
     /**
      * Exports the chosen openlayers element or view to Aurelia's global resources.

@@ -89,7 +89,7 @@ export class OlMapService {
      *
      * @param {string} mapId
      */
-    public removeMap(mapId: string): void {
+    public removeMap(mapId: string = 'main'): void {
         mapId = this.obtainEffectiveMapId(mapId);
 
         if (typeof maps[mapId] !== 'undefined') {

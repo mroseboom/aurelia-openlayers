@@ -90,6 +90,7 @@ System.register([], function (exports_1, context_1) {
                  * @param {string} mapId
                  */
                 OlMapService.prototype.removeMap = function (mapId) {
+                    if (mapId === void 0) { mapId = 'main'; }
                     mapId = this.obtainEffectiveMapId(mapId);
                     if (typeof maps[mapId] !== 'undefined') {
                         delete maps[mapId];

@@ -1,4 +1,4 @@
-System.register(["./ol-configuration", "./services/ol-map-service", "./ol-map"], function (exports_1, context_1) {
+System.register(["./ol-configuration", "./services/ol-map-service", "./ol-map", "./ol-control", "./ol-map-defaults"], function (exports_1, context_1) {
     "use strict";
     var __moduleName = context_1 && context_1.id;
     /**
@@ -17,23 +17,37 @@ System.register(["./ol-configuration", "./services/ol-map-service", "./ol-map"],
         applyConfig();
     }
     exports_1("configure", configure);
-    var ol_configuration_1, ol_map_service_1, ol_map_1;
+    var ol_configuration_1;
+    var exportedNames_1 = {
+        "configure": true
+    };
+    function exportStar_1(m) {
+        var exports = {};
+        for (var n in m) {
+            if (n !== "default" && !exportedNames_1.hasOwnProperty(n)) exports[n] = m[n];
+        }
+        exports_1(exports);
+    }
     return {
         setters: [
-            function (ol_configuration_1_1) {
-                ol_configuration_1 = ol_configuration_1_1;
+            function (ol_configuration_2_1) {
+                exportStar_1(ol_configuration_2_1);
+                ol_configuration_1 = ol_configuration_2_1;
             },
             function (ol_map_service_1_1) {
-                ol_map_service_1 = ol_map_service_1_1;
+                exportStar_1(ol_map_service_1_1);
             },
             function (ol_map_1_1) {
-                ol_map_1 = ol_map_1_1;
+                exportStar_1(ol_map_1_1);
+            },
+            function (ol_control_1_1) {
+                exportStar_1(ol_control_1_1);
+            },
+            function (ol_map_defaults_1_1) {
+                exportStar_1(ol_map_defaults_1_1);
             }
         ],
         execute: function () {
-            exports_1("AureliaOpenlayersConfiguration", ol_configuration_1.AureliaOpenlayersConfiguration);
-            exports_1("OlMapService", ol_map_service_1.OlMapService);
-            exports_1("OlMap", ol_map_1.OlMap);
         }
     };
 });

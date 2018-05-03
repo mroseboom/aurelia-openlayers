@@ -1,12 +1,12 @@
 /// <reference types="openlayers" />
-import { DefaultMapSettings } from './ol-map-defaults';
-import { OlMapService } from './services/ol-map-service';
 import Map from 'ol/map';
+import { OlMapService } from './services/ol-map-service';
 export declare class OlMap {
-    private settings;
+    private defaultSettings;
     private olMapService;
     map: Map;
     private mapReference;
-    constructor(settings: DefaultMapSettings, olMapService: OlMapService);
+    constructor(defaultSettings: olx.MapOptions, olMapService: OlMapService);
     attached(): void;
+    detached(): void;
 }
