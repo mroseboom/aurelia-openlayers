@@ -26,7 +26,7 @@ export const OlControlTypes: { [key: string]: any } = {
 
 @customElement('ol-control')
 @noView()
-autoinject()
+@autoinject()
 export class OlControl {
     @bindable() public control: string;
 

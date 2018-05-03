@@ -18,7 +18,6 @@ define(["require", "exports", "aurelia-framework", "ol/control/attribution", "ol
         zoomslider: zoomslider_1.default,
         zoomtoextent: zoomtoextent_1.default
     };
-    aurelia_framework_1.autoinject();
     var OlControl = /** @class */ (function () {
         function OlControl(olMapService) {
             this.olMapService = olMapService;
@@ -36,6 +35,11 @@ define(["require", "exports", "aurelia-framework", "ol/control/attribution", "ol
         __decorate([
             aurelia_framework_1.bindable()
         ], OlControl.prototype, "control", void 0);
+        OlControl = __decorate([
+            aurelia_framework_1.customElement('ol-control'),
+            aurelia_framework_1.noView(),
+            aurelia_framework_1.autoinject()
+        ], OlControl);
         return OlControl;
     }());
     exports.OlControl = OlControl;
