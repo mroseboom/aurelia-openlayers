@@ -1,4 +1,3 @@
-/// <reference types="openlayers" />
 import { FrameworkConfiguration } from 'aurelia-framework';
 export declare type OpenlayersResourceName = 'ol-map' | 'ol-control';
 /**
@@ -10,7 +9,7 @@ export declare class AureliaOpenlayersConfiguration {
     /**
      * The global configuration settings.
      */
-    settings: olx.MapOptions;
+    settings: ol.olx.MapOptions;
     constructor(frameworkConfig: FrameworkConfiguration, applySetter: (apply: () => void) => void);
     apply(): void;
     /**

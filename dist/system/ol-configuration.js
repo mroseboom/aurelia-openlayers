@@ -1,7 +1,7 @@
 System.register(["./ol-map-defaults", "aurelia-pal"], function (exports_1, context_1) {
     "use strict";
-    var __moduleName = context_1 && context_1.id;
     var ol_map_defaults_1, aurelia_pal_1, resources, AureliaOpenlayersConfiguration;
+    var __moduleName = context_1 && context_1.id;
     return {
         setters: [
             function (ol_map_defaults_1_1) {

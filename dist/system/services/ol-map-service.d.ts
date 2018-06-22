@@ -5,7 +5,7 @@ export declare class OlMapService {
      * @private
      * @param {string} mapId
      */
-    private setResolvedDefer(mapId);
+    private setResolvedDefer;
     /**
      * Retrieve the `unresolved` map instance
      * and return the pending promise.
@@ -13,14 +13,14 @@ export declare class OlMapService {
      * @param {string} mapId
      * @returns Promise
      */
-    private getUnresolvedDefer(mapId);
+    private getUnresolvedDefer;
     /**
      * Retrieves the `pending` promise for the map instance
      *
      * @param {string} mapId
      * @returns Promise
      */
-    private getDefer(mapId);
+    private getDefer;
     /**
      * Register a new map instance
      * When the map instance already exists
@@ -45,5 +45,5 @@ export declare class OlMapService {
      */
     removeMap(mapId?: string): void;
     isMainInstance(mapId: string): boolean;
-    private obtainEffectiveMapId(mapId?);
+    private obtainEffectiveMapId;
 }

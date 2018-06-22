@@ -1,4 +1,4 @@
-System.register(["aurelia-framework", "ol/map", "./ol-map-defaults", "./services/ol-map-service"], function (exports_1, context_1) {
+System.register(["aurelia-framework", "./ol-map-defaults", "./services/ol-map-service", "ol/Map"], function (exports_1, context_1) {
     "use strict";
     var __assign = (this && this.__assign) || Object.assign || function(t) {
         for (var s, i = 1, n = arguments.length; i < n; i++) {
@@ -14,21 +14,21 @@ System.register(["aurelia-framework", "ol/map", "./ol-map-defaults", "./services
         else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
         return c > 3 && r && Object.defineProperty(target, key, r), r;
     };
+    var aurelia_framework_1, ol_map_defaults_1, ol_map_service_1, Map_1, OlMap;
     var __moduleName = context_1 && context_1.id;
-    var aurelia_framework_1, map_1, ol_map_defaults_1, ol_map_service_1, OlMap;
     return {
         setters: [
             function (aurelia_framework_1_1) {
                 aurelia_framework_1 = aurelia_framework_1_1;
-            },
-            function (map_1_1) {
-                map_1 = map_1_1;
             },
             function (ol_map_defaults_1_1) {
                 ol_map_defaults_1 = ol_map_defaults_1_1;
             },
             function (ol_map_service_1_1) {
                 ol_map_service_1 = ol_map_service_1_1;
+            },
+            function (Map_1_1) {
+                Map_1 = Map_1_1;
             }
         ],
         execute: function () {
@@ -38,7 +38,7 @@ System.register(["aurelia-framework", "ol/map", "./ol-map-defaults", "./services
                     this.olMapService = olMapService;
                 }
                 OlMap.prototype.attached = function () {
-                    this.map = new map_1.default(__assign({}, this.defaultSettings, { target: this.mapReference }));
+                    this.map = new Map_1.default(__assign({}, this.defaultSettings, { target: this.mapReference }));
                     this.olMapService.registerMap(this);
                 };
                 OlMap.prototype.detached = function () {

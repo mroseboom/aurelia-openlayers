@@ -13,9 +13,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
 import { customElement, inject, inlineView } from 'aurelia-framework';
-import Map from 'ol/map';
 import { DefaultMapSettings } from './ol-map-defaults';
 import { OlMapService } from './services/ol-map-service';
+import Map from 'ol/Map';
 var OlMap = /** @class */ (function () {
     function OlMap(defaultSettings, olMapService) {
         this.defaultSettings = defaultSettings;

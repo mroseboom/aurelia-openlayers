@@ -6,8 +6,8 @@ System.register(["aurelia-framework", "ol/control/attribution", "ol/control/full
         else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
         return c > 3 && r && Object.defineProperty(target, key, r), r;
     };
-    var __moduleName = context_1 && context_1.id;
     var aurelia_framework_1, attribution_1, fullscreen_1, mouseposition_1, overviewmap_1, rotate_1, scaleline_1, zoom_1, zoomslider_1, zoomtoextent_1, OlControlTypes, OlControl;
+    var __moduleName = context_1 && context_1.id;
     return {
         setters: [
             function (aurelia_framework_1_1) {

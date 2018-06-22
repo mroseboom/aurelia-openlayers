@@ -1,9 +1,10 @@
-/// <reference types="openlayers" />
+import Control from 'ol/control';
+import Interaction from 'ol/interaction';
 import VectorLayer from 'ol/layer/vector';
 import View from 'ol/view';
-export declare class DefaultMapSettings implements olx.MapOptions {
-    controls: ol.Collection<ol.control.Control>;
-    interactions: ol.Collection<ol.interaction.Interaction>;
+export declare class DefaultMapSettings implements ol.olx.MapOptions {
+    controls: import("openlayers").Collection<Control.Control>;
+    interactions: import("openlayers").Collection<Interaction.Interaction>;
     view: View;
     layers: VectorLayer[];
 }

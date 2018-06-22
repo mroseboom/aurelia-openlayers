@@ -1,22 +1,22 @@
-import DefaultControls from 'ol/control/defaults';
-import DefaultInteractions from 'ol/interaction/defaults';
+import Control from 'ol/control';
+import Interaction from 'ol/interaction';
 import VectorLayer from 'ol/layer/vector';
 import VectorSource from 'ol/source/vector';
 import View from 'ol/view';
 
-const defaultControls = DefaultControls({
+const defaultControls = Control.defaults({
     attribution: false,
     rotate: false,
     zoom: false,
     attributionOptions: false
-} as olx.control.DefaultsOptions);
+} as ol.olx.control.DefaultsOptions);
 
-const defaultInteractions = DefaultInteractions({
+const defaultInteractions = Interaction.defaults({
     altShiftDragRotate: false,
     dragPan: false
-} as olx.interaction.DefaultsOptions);
+} as ol.olx.interaction.DefaultsOptions);
 
-export class DefaultMapSettings implements olx.MapOptions {
+export class DefaultMapSettings implements ol.olx.MapOptions {
     public controls = defaultControls;
     public interactions = defaultInteractions;
     public view = new View({ center: [0, 0], zoom: 2 });

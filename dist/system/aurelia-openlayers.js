@@ -1,5 +1,6 @@
 System.register(["./ol-configuration", "./services/ol-map-service", "./ol-map", "./ol-control", "./ol-map-defaults"], function (exports_1, context_1) {
     "use strict";
+    var ol_configuration_1;
     var __moduleName = context_1 && context_1.id;
     /**
      * Configures the plugin.
@@ -17,7 +18,6 @@ System.register(["./ol-configuration", "./services/ol-map-service", "./ol-map", 
         applyConfig();
     }
     exports_1("configure", configure);
-    var ol_configuration_1;
     var exportedNames_1 = {
         "configure": true
     };

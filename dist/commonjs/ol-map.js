@@ -15,16 +15,16 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 var aurelia_framework_1 = require("aurelia-framework");
-var map_1 = require("ol/map");
 var ol_map_defaults_1 = require("./ol-map-defaults");
 var ol_map_service_1 = require("./services/ol-map-service");
+var Map_1 = require("ol/Map");
 var OlMap = /** @class */ (function () {
     function OlMap(defaultSettings, olMapService) {
         this.defaultSettings = defaultSettings;
         this.olMapService = olMapService;
     }
     OlMap.prototype.attached = function () {
-        this.map = new map_1.default(__assign({}, this.defaultSettings, { target: this.mapReference }));
+        this.map = new Map_1.default(__assign({}, this.defaultSettings, { target: this.mapReference }));
         this.olMapService.registerMap(this);
     };
     OlMap.prototype.detached = function () {

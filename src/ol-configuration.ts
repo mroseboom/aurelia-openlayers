@@ -19,7 +19,7 @@ export class AureliaOpenlayersConfiguration {
     /**
      * The global configuration settings.
      */
-    public settings: olx.MapOptions;
+    public settings: ol.olx.MapOptions;
 
     constructor(private frameworkConfig: FrameworkConfiguration,
                 applySetter: (apply: () => void) => void) {

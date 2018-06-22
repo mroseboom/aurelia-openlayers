@@ -1,15 +1,15 @@
-import DefaultControls from 'ol/control/defaults';
-import DefaultInteractions from 'ol/interaction/defaults';
+import Control from 'ol/control';
+import Interaction from 'ol/interaction';
 import VectorLayer from 'ol/layer/vector';
 import VectorSource from 'ol/source/vector';
 import View from 'ol/view';
-var defaultControls = DefaultControls({
+var defaultControls = Control.defaults({
     attribution: false,
     rotate: false,
     zoom: false,
     attributionOptions: false
 });
-var defaultInteractions = DefaultInteractions({
+var defaultInteractions = Interaction.defaults({
     altShiftDragRotate: false,
     dragPan: false
 });
