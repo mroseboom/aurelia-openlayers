@@ -1,10 +1,12 @@
-import Control from 'ol/control';
-import Interaction from 'ol/interaction';
-import VectorLayer from 'ol/layer/vector';
-import View from 'ol/view';
+import DragPan from 'ol/interaction/DragPan';
+import DragRotate from 'ol/interaction/DragRotate';
+import MouseWheelZoom from 'ol/interaction/MouseWheelZoom';
+import Zoom from 'ol/control/zoom';
+import TileLayer from 'ol/layer/Tile';
+import View from 'ol/View';
 export declare class DefaultMapSettings implements ol.olx.MapOptions {
-    controls: import("openlayers").Collection<Control.Control>;
-    interactions: import("openlayers").Collection<Interaction.Interaction>;
+    controls: Zoom[];
+    interactions: (DragPan | DragRotate | MouseWheelZoom)[];
     view: View;
-    layers: VectorLayer[];
+    layers: TileLayer[];
 }

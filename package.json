@@ -1,6 +1,6 @@
 {
     "name": "aurelia-openlayers",
-    "version": "0.1.5",
+    "version": "0.1.6",
     "description": "A plugin for working with Openlayers within Aurelia",
     "keywords": [
         "aurelia",
@@ -83,6 +83,7 @@
     "devDependencies": {
         "@types/node": "10.3.4",
         "@types/ol": "^4.6.2",
+        "@types/openlayers": "^4.6.9",
         "aurelia-bootstrapper": "2.2.0",
         "aurelia-pal-browser": "1.8.0",
         "aurelia-pal-nodejs": "1.1.1",

@@ -1,14 +1,14 @@
 import { autoinject, bindable, customElement, noView } from 'aurelia-framework';
-import Attribution from 'ol/control/attribution';
-import Control from 'ol/control/control';
-import FullScreen from 'ol/control/fullscreen';
-import MousePosition from 'ol/control/mouseposition';
-import OverviewMap from 'ol/control/overviewmap';
-import Rotate from 'ol/control/rotate';
-import ScaleLine from 'ol/control/scaleline';
+import Attribution from 'ol/control/Attribution';
+import Control from 'ol/control/Control';
+import FullScreen from 'ol/control/Fullscreen';
+import MousePosition from 'ol/control/Mouseposition';
+import OverviewMap from 'ol/control/Overviewmap';
+import Rotate from 'ol/control/Rotate';
 import Zoom from 'ol/control/zoom';
-import ZoomSlider from 'ol/control/zoomslider';
-import ZoomToExtent from 'ol/control/zoomtoextent';
+import ScaleLine from 'ol/control/Scaleline';
+import ZoomSlider from 'ol/control/Zoomslider';
+import ZoomToExtent from 'ol/control/Zoomtoextent';
 import { OlMap } from './ol-map';
 import { OlMapService } from './services/ol-map-service';
 

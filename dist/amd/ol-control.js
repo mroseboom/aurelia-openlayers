@@ -4,19 +4,19 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
-define(["require", "exports", "aurelia-framework", "ol/control/attribution", "ol/control/fullscreen", "ol/control/mouseposition", "ol/control/overviewmap", "ol/control/rotate", "ol/control/scaleline", "ol/control/zoom", "ol/control/zoomslider", "ol/control/zoomtoextent"], function (require, exports, aurelia_framework_1, attribution_1, fullscreen_1, mouseposition_1, overviewmap_1, rotate_1, scaleline_1, zoom_1, zoomslider_1, zoomtoextent_1) {
+define(["require", "exports", "aurelia-framework", "ol/control/Attribution", "ol/control/Fullscreen", "ol/control/Mouseposition", "ol/control/Overviewmap", "ol/control/Rotate", "ol/control/zoom", "ol/control/Scaleline", "ol/control/Zoomslider", "ol/control/Zoomtoextent"], function (require, exports, aurelia_framework_1, Attribution_1, Fullscreen_1, Mouseposition_1, Overviewmap_1, Rotate_1, zoom_1, Scaleline_1, Zoomslider_1, Zoomtoextent_1) {
     "use strict";
     Object.defineProperty(exports, "__esModule", { value: true });
     exports.OlControlTypes = {
-        attribution: attribution_1.default,
-        fullscreen: fullscreen_1.default,
-        mouseposition: mouseposition_1.default,
-        overviewmap: overviewmap_1.default,
-        rotate: rotate_1.default,
-        scaleline: scaleline_1.default,
+        attribution: Attribution_1.default,
+        fullscreen: Fullscreen_1.default,
+        mouseposition: Mouseposition_1.default,
+        overviewmap: Overviewmap_1.default,
+        rotate: Rotate_1.default,
+        scaleline: Scaleline_1.default,
         zoom: zoom_1.default,
-        zoomslider: zoomslider_1.default,
-        zoomtoextent: zoomtoextent_1.default
+        zoomslider: Zoomslider_1.default,
+        zoomtoextent: Zoomtoextent_1.default
     };
     var OlControl = /** @class */ (function () {
         function OlControl(olMapService) {

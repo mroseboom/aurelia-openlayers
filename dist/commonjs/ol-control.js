@@ -7,25 +7,25 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 var aurelia_framework_1 = require("aurelia-framework");
-var attribution_1 = require("ol/control/attribution");
-var fullscreen_1 = require("ol/control/fullscreen");
-var mouseposition_1 = require("ol/control/mouseposition");
-var overviewmap_1 = require("ol/control/overviewmap");
-var rotate_1 = require("ol/control/rotate");
-var scaleline_1 = require("ol/control/scaleline");
+var Attribution_1 = require("ol/control/Attribution");
+var Fullscreen_1 = require("ol/control/Fullscreen");
+var Mouseposition_1 = require("ol/control/Mouseposition");
+var Overviewmap_1 = require("ol/control/Overviewmap");
+var Rotate_1 = require("ol/control/Rotate");
 var zoom_1 = require("ol/control/zoom");
-var zoomslider_1 = require("ol/control/zoomslider");
-var zoomtoextent_1 = require("ol/control/zoomtoextent");
+var Scaleline_1 = require("ol/control/Scaleline");
+var Zoomslider_1 = require("ol/control/Zoomslider");
+var Zoomtoextent_1 = require("ol/control/Zoomtoextent");
 exports.OlControlTypes = {
-    attribution: attribution_1.default,
-    fullscreen: fullscreen_1.default,
-    mouseposition: mouseposition_1.default,
-    overviewmap: overviewmap_1.default,
-    rotate: rotate_1.default,
-    scaleline: scaleline_1.default,
+    attribution: Attribution_1.default,
+    fullscreen: Fullscreen_1.default,
+    mouseposition: Mouseposition_1.default,
+    overviewmap: Overviewmap_1.default,
+    rotate: Rotate_1.default,
+    scaleline: Scaleline_1.default,
     zoom: zoom_1.default,
-    zoomslider: zoomslider_1.default,
-    zoomtoextent: zoomtoextent_1.default
+    zoomslider: Zoomslider_1.default,
+    zoomtoextent: Zoomtoextent_1.default
 };
 var OlControl = /** @class */ (function () {
     function OlControl(olMapService) {

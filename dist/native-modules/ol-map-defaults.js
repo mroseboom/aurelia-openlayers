@@ -1,25 +1,27 @@
-import Control from 'ol/control';
-import Interaction from 'ol/interaction';
-import VectorLayer from 'ol/layer/vector';
-import VectorSource from 'ol/source/vector';
-import View from 'ol/view';
-var defaultControls = Control.defaults({
-    attribution: false,
-    rotate: false,
-    zoom: false,
-    attributionOptions: false
-});
-var defaultInteractions = Interaction.defaults({
-    altShiftDragRotate: false,
-    dragPan: false
-});
+import DragPan from 'ol/interaction/DragPan';
+import DragRotate from 'ol/interaction/DragRotate';
+import MouseWheelZoom from 'ol/interaction/MouseWheelZoom';
+import Zoom from 'ol/control/zoom';
+import TileLayer from 'ol/layer/Tile';
+import OSM from 'ol/source/OSM';
+import View from 'ol/View';
+var defaultControls = [
+    new Zoom()
+];
+var defaultInteractions = [
+    new DragPan({
+        kinetic: false
+    }),
+    new DragRotate(),
+    new MouseWheelZoom()
+];
 var DefaultMapSettings = /** @class */ (function () {
     function DefaultMapSettings() {
         this.controls = defaultControls;
         this.interactions = defaultInteractions;
         this.view = new View({ center: [0, 0], zoom: 2 });
         this.layers = [
-            new VectorLayer({ source: new VectorSource() })
+            new TileLayer({ source: new OSM() })
         ];
     }
     return DefaultMapSettings;
