@@ -60,41 +60,34 @@
         "peerDependencies": {
             "aurelia-pal": "1.8.0",
             "aurelia-dependency-injection": "1.4.1",
-            "aurelia-framework": "1.3.0-rc.2",
+            "aurelia-framework": "1.3.0",
             "aurelia-logging": "1.5.0",
-            "ol": "v5.0.0-beta.12"
-        },
-        "dependencies": {
-            "aurelia-pal": "1.8.0",
-            "aurelia-dependency-injection": "1.4.1",
-            "aurelia-framework": "1.3.0-rc.2",
-            "aurelia-logging": "1.5.0",
-            "ol": "v5.0.0-beta.12"
+            "ol": "5.1.3"
         },
         "devDependencies": {}
     },
-    "dependencies": {
+    "peerDependencies": {
         "aurelia-dependency-injection": "1.4.1",
-        "aurelia-framework": "1.3.0-rc.2",
+        "aurelia-framework": "1.3.0",
         "aurelia-logging": "1.5.0",
         "aurelia-pal": "^1.8.0",
-        "ol": "v5.0.0-beta.12"
+        "ol": "5.1.3"
     },
     "devDependencies": {
-        "@types/node": "10.3.4",
+        "@types/node": "10.5.1",
         "@types/ol": "^4.6.2",
-        "@types/openlayers": "^4.6.9",
-        "aurelia-bootstrapper": "2.2.0",
+        "@types/openlayers": "^4.6.10",
+        "aurelia-bootstrapper": "2.3.0",
         "aurelia-pal-browser": "1.8.0",
         "aurelia-pal-nodejs": "1.1.1",
         "aurelia-polyfills": "^1.3.0",
         "aurelia-testing": "1.0.0-beta.4.0.0",
-        "concurrently": "3.6.0",
+        "concurrently": "3.6.1",
         "conventional-changelog-cli": "2.0.1",
         "copyfiles": "2.0.0",
         "cross-env": "5.2.0",
         "jasmine-core": "3.1.0",
-        "karma": "2.0.4",
+        "karma": "2.0.5",
         "karma-chrome-launcher": "2.2.0",
         "karma-ie-launcher": "1.0.0",
         "karma-jasmine": "1.1.2",
@@ -102,7 +95,7 @@
         "requirejs": "2.3.5",
         "requirejs-text": "2.0.15",
         "rimraf": "2.6.2",
-        "tslint": "5.10.0",
+        "tslint": "5.11.0",
         "typedoc": "0.11.1",
         "typescript": "2.9.2"
     },
