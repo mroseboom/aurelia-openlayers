@@ -1,6 +1,7 @@
 import { customElement, inject, inlineView } from 'aurelia-framework';
 import { DefaultMapSettings } from './ol-map-defaults';
 import { OlMapService } from './services/ol-map-service';
+import { MapOptions } from 'ol/PluggableMap';
 import Map from 'ol/Map';
 
 @inlineView(`<template><div ref="mapReference"><slot></slot></div></template>`)
@@ -10,7 +11,7 @@ export class OlMap {
     public map: Map;
     private mapReference: HTMLElement;
 
-    constructor(private defaultSettings: ol.olx.MapOptions,
+    constructor(private defaultSettings: MapOptions,
                 private olMapService: OlMapService) { }
 
     public attached(): void {

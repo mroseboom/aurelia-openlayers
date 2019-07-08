@@ -1,3 +1,5 @@
+import ZoomToExtent from 'ol/control/Zoomtoextent';
+import ScaleLine from 'ol/control/Scaleline';
 import { autoinject, bindable, customElement, noView } from 'aurelia-framework';
 import Attribution from 'ol/control/Attribution';
 import Control from 'ol/control/Control';
@@ -6,9 +8,7 @@ import MousePosition from 'ol/control/Mouseposition';
 import OverviewMap from 'ol/control/Overviewmap';
 import Rotate from 'ol/control/Rotate';
 import Zoom from 'ol/control/zoom';
-import ScaleLine from 'ol/control/Scaleline';
 import ZoomSlider from 'ol/control/Zoomslider';
-import ZoomToExtent from 'ol/control/Zoomtoextent';
 import { OlMap } from './ol-map';
 import { OlMapService } from './services/ol-map-service';
 

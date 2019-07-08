@@ -33,9 +33,7 @@ System.register(["ol/interaction/DragPan", "ol/interaction/DragRotate", "ol/inte
                         new zoom_1.default()
                     ];
                     this.interactions = [
-                        new DragPan_1.default({
-                            kinetic: false
-                        }),
+                        new DragPan_1.default(),
                         new DragRotate_1.default(),
                         new MouseWheelZoom_1.default()
                     ];

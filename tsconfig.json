@@ -17,8 +17,18 @@
         "forceConsistentCasingInFileNames": true,
         "experimentalDecorators": true,
         "noEmitHelpers": false,
-        "stripInternal": true
+        "stripInternal": true,
+        "allowJs": true,
+        "baseUrl": "./",
+        "paths": {
+            "ol": ["node_modules/ol/src"],
+            "ol/*": ["node_modules/ol/src/*"]
+        }
     },
+    // "include": [
+    //     // Include javascript files from the ol package
+    //     "node_modules/ol/**/*.js"
+    // ],
     "exclude": [
         ".vscode",
         "dist",

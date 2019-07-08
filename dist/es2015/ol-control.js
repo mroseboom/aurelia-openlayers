@@ -4,6 +4,8 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+import ZoomToExtent from 'ol/control/Zoomtoextent';
+import ScaleLine from 'ol/control/Scaleline';
 import { autoinject, bindable, customElement, noView } from 'aurelia-framework';
 import Attribution from 'ol/control/Attribution';
 import FullScreen from 'ol/control/Fullscreen';
@@ -11,9 +13,7 @@ import MousePosition from 'ol/control/Mouseposition';
 import OverviewMap from 'ol/control/Overviewmap';
 import Rotate from 'ol/control/Rotate';
 import Zoom from 'ol/control/zoom';
-import ScaleLine from 'ol/control/Scaleline';
 import ZoomSlider from 'ol/control/Zoomslider';
-import ZoomToExtent from 'ol/control/Zoomtoextent';
 export var OlControlTypes = {
     attribution: Attribution,
     fullscreen: FullScreen,

@@ -11,9 +11,7 @@ var DefaultMapSettings = /** @class */ (function () {
             new Zoom()
         ];
         this.interactions = [
-            new DragPan({
-                kinetic: false
-            }),
+            new DragPan(),
             new DragRotate(),
             new MouseWheelZoom()
         ];

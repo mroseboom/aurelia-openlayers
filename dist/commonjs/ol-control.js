@@ -6,6 +6,8 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
 Object.defineProperty(exports, "__esModule", { value: true });
+var Zoomtoextent_1 = require("ol/control/Zoomtoextent");
+var Scaleline_1 = require("ol/control/Scaleline");
 var aurelia_framework_1 = require("aurelia-framework");
 var Attribution_1 = require("ol/control/Attribution");
 var Fullscreen_1 = require("ol/control/Fullscreen");
@@ -13,9 +15,7 @@ var Mouseposition_1 = require("ol/control/Mouseposition");
 var Overviewmap_1 = require("ol/control/Overviewmap");
 var Rotate_1 = require("ol/control/Rotate");
 var zoom_1 = require("ol/control/zoom");
-var Scaleline_1 = require("ol/control/Scaleline");
 var Zoomslider_1 = require("ol/control/Zoomslider");
-var Zoomtoextent_1 = require("ol/control/Zoomtoextent");
 exports.OlControlTypes = {
     attribution: Attribution_1.default,
     fullscreen: Fullscreen_1.default,
